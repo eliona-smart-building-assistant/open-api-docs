@@ -1,9 +1,14 @@
 window.onload = function() {
   //<editor-fold desc="Changeable Configuration Block">
 
-  // the following lines will be replaced by docker/configurator, when it runs in a docker-container
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const yaml = urlParams.get('yaml')
+  if (!yaml) { yaml = window.location.search ? window.location.search.substring(1) : "" }
+  
+  // the following lines will be replaced by docker/configurator, when it runs in a docker-container  
   window.ui = SwaggerUIBundle({
-    url: window.location.search ? window.location.search.substring(1) : "",
+    url: yaml,
     dom_id: '#swagger-ui',
     deepLinking: true,
     presets: [
