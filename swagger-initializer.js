@@ -4,7 +4,7 @@ window.onload = function() {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const yaml = urlParams.get('yaml')
-  if (!yaml) { yaml = window.location.search ? window.location.search.substring(1) : "" }
+  if (!yaml) { yaml = queryString.substring(1) }
   
   // the following lines will be replaced by docker/configurator, when it runs in a docker-container  
   window.ui = SwaggerUIBundle({
