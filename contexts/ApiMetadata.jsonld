@@ -1,0 +1,8 @@
+{
+  "@context": {
+    "version": "https://api.eliona.io/schema#version",
+    "commit": "https://api.eliona.io/schema#commit",
+    "timestamp": "https://api.eliona.io/schema#timestamp",
+    "@vocab": "https://api.eliona.io/schema#"
+  }
+}

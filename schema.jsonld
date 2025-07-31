@@ -1,0 +1,40 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "eliona": "https://api.eliona.io/schema#"
+  },
+  "@graph": [
+    {
+      "@id": "eliona:APIMetadata",
+      "@type": "rdfs:Class",
+      "rdfs:label": "API Metadata",
+      "rdfs:comment": "Describes metadata about an Eliona API instance."
+    },
+    {
+      "@id": "eliona:version",
+      "@type": "rdf:Property",
+      "rdfs:label": "version",
+      "rdfs:comment": "The semantic version of the API.",
+      "rdfs:domain": "eliona:APIMetadata",
+      "rdfs:range": "xsd:string"
+    },
+    {
+      "@id": "eliona:commit",
+      "@type": "rdf:Property",
+      "rdfs:label": "commit",
+      "rdfs:comment": "The git commit hash of the current deployment.",
+      "rdfs:domain": "eliona:APIMetadata",
+      "rdfs:range": "xsd:string"
+    },
+    {
+      "@id": "eliona:timestamp",
+      "@type": "rdf:Property",
+      "rdfs:label": "timestamp",
+      "rdfs:comment": "The build or deployment timestamp.",
+      "rdfs:domain": "eliona:APIMetadata",
+      "rdfs:range": "xsd:dateTime"
+    }
+  ]
+}
