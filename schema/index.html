@@ -5,51 +5,7 @@
     <title>Eliona API Vocabulary</title>
 
     <!-- Tell clients where the JSON-LD is -->
-    <link rel="alternate" type="application/ld+json" href="/schema.jsonld">
-
-    <!-- Option A (nice): embed the JSON-LD right here as well -->
-    <script type="application/ld+json">
-        {
-            "@context": {
-                "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-                "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-                "xsd": "http://www.w3.org/2001/XMLSchema#",
-                "eliona": "https://api.eliona.io/schema#"
-            },
-            "@graph": [
-                {
-                    "@id": "eliona:APIMetadata",
-                    "@type": "rdfs:Class",
-                    "rdfs:label": "API Metadata",
-                    "rdfs:comment": "Describes metadata about an Eliona API instance."
-                },
-                {
-                    "@id": "eliona:version",
-                    "@type": "rdf:Property",
-                    "rdfs:label": "version",
-                    "rdfs:comment": "The semantic version of the API.",
-                    "rdfs:domain": "eliona:APIMetadata",
-                    "rdfs:range": "xsd:string"
-                },
-                {
-                    "@id": "eliona:commit",
-                    "@type": "rdf:Property",
-                    "rdfs:label": "commit",
-                    "rdfs:comment": "The git commit hash of the current deployment.",
-                    "rdfs:domain": "eliona:APIMetadata",
-                    "rdfs:range": "xsd:string"
-                },
-                {
-                    "@id": "eliona:timestamp",
-                    "@type": "rdf:Property",
-                    "rdfs:label": "timestamp",
-                    "rdfs:comment": "The build or deployment timestamp.",
-                    "rdfs:domain": "eliona:APIMetadata",
-                    "rdfs:range": "xsd:dateTime"
-                }
-            ]
-        }
-    </script>
+    <link rel="alternate" type="application/ld+json" href="schema.jsonld">
 
     <style>
         body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:900px;margin:3rem auto;padding:0 1rem;line-height:1.5}
@@ -62,7 +18,7 @@
 <h1>Eliona API Vocabulary</h1>
 <p>
     Namespace IRI: <code>https://api.eliona.io/schema#</code><br>
-    JSON-LD: <a href="/schema.jsonld">/schema.jsonld</a>
+    JSON-LD: <a href="schema.jsonld">/schema.jsonld</a>
 </p>
 
 <div class="term" id="APIMetadata">
@@ -91,6 +47,13 @@
     <div class="id"><code>https://api.eliona.io/schema#timestamp</code></div>
     <p>The build or deployment timestamp.</p>
     <p><em>domain:</em> <a href="#APIMetadata">APIMetadata</a> • <em>range:</em> <code>xsd:dateTime</code></p>
+</div>
+
+<div class="term" id="typeName">
+    <h2>typeName</h2>
+    <div class="id"><code>https://api.eliona.io/schema#typeName</code></div>
+    <p>Name of the type.</p>
+    <p><em>range:</em> <code>xsd:string</code></p>
 </div>
 </body>
 </html>
