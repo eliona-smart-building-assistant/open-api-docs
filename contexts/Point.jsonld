@@ -5,6 +5,6 @@
     "@vocab": "https://api.eliona.io/schema#",
     "schema": "https://schema.org/",
     "name": "schema:name",
-    "typeName": "https://api.eliona.io/schema#TypeTemplateName"
+    "typeName": "https://api.eliona.io/schema#typeName"
   }
 }
