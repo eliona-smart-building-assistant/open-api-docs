@@ -1,0 +1,24 @@
+{
+  "@id": "dtmi:io:eliona:Point;1",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;3",
+  "displayName": {
+    "en": "Eliona Point"
+  },
+  "description": {
+    "en": "Eliona-specific Point extending Brick Point with additional properties."
+  },
+  "extends": [
+    "dtmi:org:brickschema:schema:Brick:Point;1"
+  ],
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "typeName",
+      "displayName": { "en": "Type Name" },
+      "description": { "en": "Name of the type." },
+      "schema": "string",
+      "writable": true
+    }
+  ]
+}
