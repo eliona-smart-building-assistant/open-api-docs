@@ -15,8 +15,16 @@
     {
       "@type": "Property",
       "name": "typeName",
-      "displayName": { "en": "Type Name" },
-      "description": { "en": "Name of the type." },
+      "displayName": { "en": "Point Type Name" },
+      "description": { "en": "Name of the point type." },
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "name",
+      "displayName": { "en": "Point Name" },
+      "description": { "en": "Name of the point." },
       "schema": "string",
       "writable": true
     }
